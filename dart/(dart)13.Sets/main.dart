@@ -12,4 +12,5 @@ void main(List<String> args) {
   numbers2.add(1);
   numbers2.add(1);
   print(numbers2);
+  // [1, 2, 3, 4, 1, 1, 1]
 }
