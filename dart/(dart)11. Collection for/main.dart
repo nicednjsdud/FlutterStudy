@@ -7,4 +7,5 @@ void main(List<String> args) {
     for (var friend in oldFriends) "🥰 $friend",
   ];
   print(newFriends);
+  // [lewis, Joon, teak, 🥰 bob, 🥰 woori]
 }
