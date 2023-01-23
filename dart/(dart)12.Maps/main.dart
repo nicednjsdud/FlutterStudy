@@ -24,4 +24,5 @@ void main(List<String> args) {
     {'name': 'bob', 'xp': 199993.33},
   ];
   print(players);
+  // [{name: bob, xp: 199993.33}, {name: bob, xp: 199993.33}]
 }
