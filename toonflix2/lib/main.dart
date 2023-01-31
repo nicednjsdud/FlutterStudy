@@ -10,6 +10,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  bool showTitle = true;
+
+  void toggleTitle() {
+    setState(() {
+      showTitle = !showTitle;
+    });
+  }
   // int counter = 0;
   // List<int> numbers = [];
 
@@ -36,8 +43,12 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              MyLargeTilte(),
+            children: [
+              showTitle ? const MyLargeTilte() : const Text('noting'),
+              IconButton(
+                onPressed: toggleTitle,
+                icon: const Icon(Icons.remove_red_eye),
+              ),
             ],
           ),
         ),
@@ -46,11 +57,16 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class MyLargeTilte extends StatelessWidget {
+class MyLargeTilte extends StatefulWidget {
   const MyLargeTilte({
     Key key,
   }) : super(key: key);
 
+  @override
+  State<MyLargeTilte> createState() => _MyLargeTilteState();
+}
+
+class _MyLargeTilteState extends State<MyLargeTilte> {
   @override
   Widget build(BuildContext context) {
     return Text(
