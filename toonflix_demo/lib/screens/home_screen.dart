@@ -3,6 +3,7 @@ import 'package:toonflix_demo/models/webtoon_model.dart';
 import 'package:toonflix_demo/services/api_service.dart';
 import 'package:toonflix_demo/widgets/webtoon_widget.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
 
